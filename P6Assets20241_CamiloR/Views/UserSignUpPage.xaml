@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P6Assets20241_CamiloR.Views.UserSignUpPage"
+             Title="User SignUpPage">
+    <VerticalStackLayout Padding="20" BackgroundColor="#08072f">
+
+        <Entry x:Name="TxtUsername" Placeholder="User/Email" TextColor="WhiteSmoke" Margin="0, 5, 0, 5" Keyboard="Email"  >
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="GreenYellow" />
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="FontFamily" Value="Bold"/>
+                </Trigger>
+            </Entry.Triggers>
+        </Entry>
+        <Entry x:Name="TxtCardId" Placeholder="CardId" TextColor="WhiteSmoke" Margin="0, 5, 0, 5" Keyboard="Numeric"/>
+        <Entry x:Name="TxtFirstName" Placeholder="First Name" TextColor="WhiteSmoke" Margin="0, 5, 0, 5"/>
+        <Entry x:Name="TxtLastName" Placeholder="Last Name" TextColor="WhiteSmoke" Margin="0, 5, 0, 5"/>
+        <Entry x:Name="TxtPhoneNumber" Placeholder="Phone Number" TextColor="WhiteSmoke" Margin="0, 5, 0, 5" Keyboard="Telephone"/>
+        <Editor x:Name="TxtAddress" Placeholder="Address" TextColor="WhiteSmoke" Margin="0, 5, 0, 5" HeightRequest="100" />
+        <Entry x:Name="TxtPassword" Placeholder="Password" TextColor="WhiteSmoke" Margin="0, 5, 0, 5"/>
+
+        <Picker x:Name="CboxUserRole" Title="Select a User Role" TextColor="Black" TitleColor="DimGrey" ItemDisplayBinding="{Binding Path=UserRoleDescription}"/>
+        <StackLayout Orientation="Horizontal"  >
+            <Button x:Name="BtnAdd" Text="Add" Margin="0,20,20,5" Clicked="BtnAdd_Clicked" BackgroundColor="DarkGreen"/>
+            <Button x:Name="BtnCancel" Text="Cancel" Margin="0,20,0,5" Clicked="BtnCancel_Clicked" BackgroundColor="Maroon"/>
+
+        </StackLayout>
+        
+        
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

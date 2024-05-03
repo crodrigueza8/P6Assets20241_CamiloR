@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P6Assets20241_CamiloR.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="loginbackground1">
+    <VerticalStackLayout VerticalOptions="Center" Padding="20,0,20,0">
+
+        <Entry x:Name="TxtEmail"  Placeholder="Email..." FontSize="30" Keyboard="Email"/>
+
+        <Entry x:Name="TxtPassword" Placeholder="Password..." FontSize="30" Keyboard="Text" IsPassword="True"/>
+
+        <Switch x:Name="SwVerPassword" IsToggled="False" Toggled="SwVerPassword_Toggled"/>
+
+        <Button x:Name="BtnIngresar" Text="Login" BackgroundColor="Green" TextColor="White" Clicked="BtnIngresar_Clicked" Margin="0, 5, 0, 15"/>
+
+        <Button x:Name="BtnSignUp" Text="Sign up"  Clicked="BtnSignUp_Clicked"  />
+
+        <Label  x:Name="LblPasswordRecovery" Text="Password Recovery" HorizontalTextAlignment="End" Margin="0, 50, 0, 0">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+    </VerticalStackLayout>
+</ContentPage>
